@@ -22,7 +22,6 @@ class EmployeeTest {
     @Test
     void test_fail_name_1()
     {
-        Employee Jo;
         Exception e_message = assertThrows(IllegalArgumentException.class,()->new Employee("Jo",12345678902L,"Full-time","Woman",50));
         assertEquals("Name must be 3 to 25 character long", e_message.getMessage());
     }
@@ -30,7 +29,6 @@ class EmployeeTest {
     @Test
     void test_fail_name_2()
     {
-        Employee All;
         Exception e_message = assertThrows(IllegalArgumentException.class, ()->new Employee("pqwertyuiopasdfghjklzxcvbnm",12345678902L,"Full-time","Woman",50));
         assertEquals("Name must be 3 to 25 character long", e_message.getMessage());
     }
@@ -45,7 +43,6 @@ class EmployeeTest {
     @Test
     void test_fail_ppsid()
     {
-        Employee Shan;
         Exception e_message = assertThrows(IllegalArgumentException.class,()->new Employee("Shan", 123456L,"Full-time","Man",50 ));
         assertEquals("PPSId must be 11 digits",e_message.getMessage());
 
@@ -72,6 +69,12 @@ class EmployeeTest {
         assertEquals("Contract",Joe.getEmploymentType());
     }
 
+    @Test
+    void test_fail_emp_type1()
+    {
+        Exception e_message = assertThrows(IllegalArgumentException.class,()->new Employee("Shan", 12345678902L,"Fun time","Man",50 ));
+        assertEquals("Invalid Employment Type",e_message.getMessage());
+    }
     @AfterAll
     static void afterAll() {
 
