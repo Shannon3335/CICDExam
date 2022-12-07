@@ -50,6 +50,13 @@ class EmployeeTest {
         assertEquals("PPSId must be 11 digits",e_message.getMessage());
 
     }
+
+    @Test
+    void test_success_emp_type1()
+    {
+        Employee Joe = new Employee("Joe",12345678902L,"Full-time","Man",50);
+        assertEquals("Full-time",Joe.getEmploymentType());
+    }
     @AfterAll
     static void afterAll() {
 
