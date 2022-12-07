@@ -41,6 +41,15 @@ class EmployeeTest {
         Employee Joe = new Employee("Joe",12345678902L,"Full-time","Man",50);
         assertEquals(12345678902L,Joe.getPpsId());
     }
+
+    @Test
+    void test_fail_ppsid()
+    {
+        Employee Shan;
+        Exception e_message = assertThrows(IllegalArgumentException.class,()->new Employee("Shan", 123456L,"Full-time","Man",50 ));
+        assertEquals("PPSId must be 11 digits",e_message.getMessage());
+
+    }
     @AfterAll
     static void afterAll() {
 

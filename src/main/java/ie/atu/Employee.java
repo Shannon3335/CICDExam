@@ -36,7 +36,12 @@ public class Employee {
     }
 
     public void setPpsId(long ppsId) {
-        this.ppsId = ppsId;
+        if(Long.toString(ppsId).length() == 11) {
+            this.ppsId = ppsId;
+        }
+        else{
+            throw new IllegalArgumentException("PPSId must be 11 digits");
+        }
     }
 
     public String getEmploymentType() {
