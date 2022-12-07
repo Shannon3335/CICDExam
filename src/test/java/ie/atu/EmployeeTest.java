@@ -83,6 +83,13 @@ class EmployeeTest {
         assertEquals("Non-Binary",Joe.getGender());
     }
 
+    @Test
+    void test_fail_gender()
+    {
+        Exception e_message = assertThrows(IllegalArgumentException.class,()->new Employee("Shan", 12345678902L,"Full-time","Hello",50 ));
+        assertEquals("Invalid Gender",e_message.getMessage());
+    }
+
     @AfterAll
     static void afterAll() {
 

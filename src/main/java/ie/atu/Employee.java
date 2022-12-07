@@ -49,7 +49,7 @@ public class Employee {
     }
 
     public void setEmploymentType(String employmentType) {
-        if(employmentType == "Full-time" || employmentType == "Part-time" || employmentType == "Contract"){
+        if(employmentType.equals("Full-time") || employmentType .equals("Part-time") || employmentType.equals("Contract")){
             this.employmentType = employmentType;
         }
         else{
@@ -63,7 +63,14 @@ public class Employee {
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+
+        if(gender.equals("Man") || gender.equals("Woman") || gender.equals("Non-Binary")) {
+            this.gender = gender;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Invalid Gender");
+        }
     }
 
     public int getAge() {
