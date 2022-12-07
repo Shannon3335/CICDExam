@@ -49,7 +49,13 @@ public class Employee {
     }
 
     public void setEmploymentType(String employmentType) {
-        this.employmentType = employmentType;
+        if(employmentType == "Full-time" || employmentType == "Part-time" || employmentType == "Contract"){
+            this.employmentType = employmentType;
+        }
+        else{
+            throw new IllegalArgumentException("Invalid Employment Type");
+        }
+
     }
 
     public String getGender() {
