@@ -96,6 +96,14 @@ class EmployeeTest {
         Employee Joe = new Employee("Joe",12345678902L,"Part-time","Non-Binary",50);
         assertEquals(50,Joe.getAge());
     }
+
+    @Test
+    void test_fail_age()
+    {
+        Exception e_message = assertThrows(IllegalArgumentException.class,()->new Employee("Shan", 12345678902L,"Full-time","Man",100 ));
+        assertEquals("Age must be over 16 and below 66",e_message.getMessage());
+    }
+
     @AfterAll
     static void afterAll() {
 

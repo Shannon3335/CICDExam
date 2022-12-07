@@ -78,6 +78,13 @@ public class Employee {
     }
 
     public void setAge(int age) {
-        this.age = age;
+
+        if(16<age && age<66) {
+            this.age = age;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Age must be over 16 and below 66");
+        }
     }
 }
