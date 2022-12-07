@@ -90,6 +90,12 @@ class EmployeeTest {
         assertEquals("Invalid Gender",e_message.getMessage());
     }
 
+    @Test
+    void test_success_age()
+    {
+        Employee Joe = new Employee("Joe",12345678902L,"Part-time","Non-Binary",50);
+        assertEquals(50,Joe.getAge());
+    }
     @AfterAll
     static void afterAll() {
 
