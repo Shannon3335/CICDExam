@@ -20,7 +20,15 @@ public class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name.length()<3 || name.length()>25)
+        {
+            throw new IllegalArgumentException("Name must be 3 to 25 character long");
+        }
+        else
+        {
+            this.name = name;
+        }
+
     }
 
     public long getPpsId() {
