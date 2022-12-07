@@ -7,6 +7,9 @@ public class Employee {
     String gender;
     int age;
 
+    public static void main(String[] args) {
+
+    }
     public Employee(String name, long ppsId, String employmentType, String gender, int age) {
         this.setName(name);
         this.setPpsId(ppsId);
