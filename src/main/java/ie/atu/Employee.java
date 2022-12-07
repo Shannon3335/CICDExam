@@ -5,14 +5,14 @@ public class Employee {
     long ppsId;
     String employmentType;
     String gender;
-    int Age;
+    int age;
 
     public Employee(String name, long ppsId, String employmentType, String gender, int age) {
         this.setName(name);
         this.setPpsId(ppsId);
         this.setEmploymentType(employmentType);
         this.setGender(gender);
-        this.setAge(Age);
+        this.setAge(age);
     }
 
     public String getName() {
@@ -74,10 +74,10 @@ public class Employee {
     }
 
     public int getAge() {
-        return Age;
+        return this.age;
     }
 
     public void setAge(int age) {
-        Age = age;
+        this.age = age;
     }
 }
