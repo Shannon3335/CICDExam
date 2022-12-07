@@ -34,6 +34,13 @@ class EmployeeTest {
         Exception e_message = assertThrows(IllegalArgumentException.class, ()->new Employee("pqwertyuiopasdfghjklzxcvbnm",12345678902L,"Full-time","Woman",50));
         assertEquals("Name must be 3 to 25 character long", e_message.getMessage());
     }
+
+    @Test
+    void test_success_ppsid()
+    {
+        Employee Joe = new Employee("Joe",12345678902L,"Full-time","Man",50);
+        assertEquals(12345678902L,Joe.getPpsId());
+    }
     @AfterAll
     static void afterAll() {
 
