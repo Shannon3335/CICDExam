@@ -57,6 +57,21 @@ class EmployeeTest {
         Employee Joe = new Employee("Joe",12345678902L,"Full-time","Man",50);
         assertEquals("Full-time",Joe.getEmploymentType());
     }
+
+    @Test
+    void test_success_emp_type2()
+    {
+        Employee Joe = new Employee("Joe",12345678902L,"Part-time","Man",50);
+        assertEquals("Part-time",Joe.getEmploymentType());
+    }
+
+    @Test
+    void test_success_emp_type3()
+    {
+        Employee Joe = new Employee("Joe",12345678902L,"Contract","Man",50);
+        assertEquals("Contract",Joe.getEmploymentType());
+    }
+
     @AfterAll
     static void afterAll() {
 
