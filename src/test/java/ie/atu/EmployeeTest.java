@@ -78,6 +78,7 @@ class EmployeeTest {
         Employee Joe = new Employee("Joe",12345678902L,"Part-time","Non-Binary",50);
         assertEquals("Non-Binary",Joe.getGender());
     }
+
     @AfterAll
     static void afterAll() {
 
